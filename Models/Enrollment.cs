@@ -10,4 +10,16 @@ public class Enrollment
     public Course Course { get; set; } = null!;
 
     public Enrollment() { }
+    public Enrollment(DetailedEnrollmentDTO detailedEnrollmentDTO) { 
+        Id = detailedEnrollmentDTO.Id;
+        Grade = detailedEnrollmentDTO.Grade;
+        Student = new Student(detailedEnrollmentDTO.Student);
+        Course = new Course(detailedEnrollmentDTO.Course);
+    }
+    public Enrollment(EnrollmentDTO enrollmentDTO) { 
+        Id = enrollmentDTO.Id;
+        Grade = enrollmentDTO.Grade;
+        StudentId = enrollmentDTO.StudentId;
+        CourseId = enrollmentDTO.CourseId;
+    }
 }

@@ -17,7 +17,6 @@ public class Student
         LastName = studentDTO.LastName;
         FirstName = studentDTO.FirstName;
         EnrollmentDate = studentDTO.EnrollmentDate;
-        Enrollments = studentDTO.Enrollments;
 
     }
 }
